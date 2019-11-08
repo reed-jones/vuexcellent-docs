@@ -36,6 +36,13 @@ Same as the above `asArray` however Json encoded.
 
 ---
 
+```php
+return Vuex::asResponse();
+```
+Returns a response properly formatted to be picked up by the auto-mutators on the front-end.
+
+---
+
 ## Instance Methods
 
 ```php
@@ -71,3 +78,29 @@ Behind the scenes `@vuex` expands into
 ```
 
 `@app` is just a shorthand for `<div id="app"></div>`
+
+## Configuration Options
+Configuration Options to be supplied when first instantiating Vuexcellent.
+```js
+Vue.use(Vuex, options)
+```
+---
+
+```
+options.autoMutate
+```
+True by default. Expects a boolean value. Enables auto mutations in response to api calls.
+
+---
+
+```
+options.axios
+```
+Axios instance. In order for auto-mutate to work, axios must be made available. This option allows providing an instance. Alternatively, axios may be attached to the window `window.axios = axios`
+
+---
+
+```
+options.mutationPrefix
+```
+String. This is the prefix used for all generated mutations to avoid namespace collisions. Defaults to `X_SET`. It is unlikely that this will be needed to change, however it is exposed as an advanced option.

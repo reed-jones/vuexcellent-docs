@@ -14,3 +14,5 @@ All thats left before moving to the javascript is to add the injection point. Go
   @vuex
 </head>
 ```
+
+Now any data stored on the Laravel side in 'Vuex' will be made immediately available in Vue.js upon page load.
