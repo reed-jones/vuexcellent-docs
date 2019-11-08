@@ -3,6 +3,7 @@ module.exports = {
     description: 'Just playing around',
     themeConfig: {
         repo: 'reed-jones/vuexcellent-docs',
+        docsDir: 'docs',
         editLinks: true,
         nav: [
             { text: 'Home', link: '/' },
